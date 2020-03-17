@@ -1,0 +1,113 @@
+.site-footer {
+  display: grid;
+  grid-column: 1/4;
+  grid-template-columns: 1fr 1fr 1fr;
+  margin-right: calc((-100vw + 100%) / 2);
+  margin-left: calc((-100vw + 100%) / 2);
+  padding-right: calc((100vw - 100%) / 2);
+  padding-left: calc((100vw - 100%) / 2);
+  background-image: url('https://enl.ee/wp-content/themes/enl_uus/img/ENL_footer_bg.png');
+ 
+
+  @include medium {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @include small {
+    grid-template-columns: 1fr;
+  }
+
+  &__social img {
+    height: 3.5rem;
+    margin-top: 0.5rem;
+    margin-left: 0.1rem;
+  }
+
+  &__title,
+  &__title a {
+    color: $color-white;
+    font-weight: bold;
+    font-size: 1.4rem;
+    line-height: 2;
+    letter-spacing: 0.1rem;
+  }
+
+  &__text,
+  &__text a {
+    margin-left: 0.7rem;
+    color: $color-white;
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 1.86;
+  }
+
+  &__text p {
+    margin-left: 0.7rem;
+    color: $color-white;
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 1.86;
+  }
+  
+
+  ul {
+    margin: 2rem 0;
+    padding: 0;
+  }
+
+  li,
+  p {
+    line-height: 1.4;
+  }
+
+  &__column {
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+
+    @include medium {
+      text-align: center;
+
+      &:nth-of-type(3) {
+        grid-column: 1/3;
+      }
+    }
+
+    @include small {
+      grid-column: 1/2;
+      margin-top: 0;
+      margin-bottom: 0;
+
+      &:nth-of-type(1) {
+        margin-top: 3rem;
+      }
+
+      &:nth-of-type(3) {
+        margin-bottom: 3rem;
+      }
+    }
+
+  }
+
+  &__map {
+    width: 80%;
+    height: 20rem;
+    min-height: 0;
+    margin-top: 1rem;
+  }
+
+  &__copyright {
+    grid-column: 1/4;
+    margin-bottom: 2rem;
+    color: $color-white;
+
+    @include medium {
+      grid-column: 1/3;
+    }
+
+    p {
+      font-weight: 400;
+      font-size: 1.2rem;
+      line-height: 1.1;
+    }
+  }
+}

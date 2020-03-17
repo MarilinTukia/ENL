@@ -1,0 +1,11 @@
+.front-page-elements {
+  display: flex;
+  flex-wrap: wrap;
+  grid-column: 1/3;
+
+  @include medium-larger {
+    grid-column: 1/4;
+  }
+}
+
+

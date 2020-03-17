@@ -1,0 +1,160 @@
+.front-page-element {
+  position: relative;
+  width: 31rem;
+  height: 32.9rem;
+  margin: 0.3rem;
+  background-color: transparent;
+
+  @include medium-larger {
+    width: 50%;
+    width: calc(50% - 0.6rem);
+  }
+
+  @include small {
+    width: 100%;
+
+    &:nth-of-type(1n+4) {
+      display: none;
+    }
+
+  }
+
+
+  a {
+    position: absolute;
+    bottom: 2rem;
+    left: 1rem;
+    padding: 0 1.5rem;
+    color: $color-white;
+    font-weight: 300;
+    font-size: 2.5rem;
+    line-height: 1.6;
+    background-color: $color-brand;
+  }
+}
+
+
+.front-page-element__inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  box-shadow: 0 0.4rem 0.8rem 0 rgba(0, 0, 0, 0.2);
+  transform-style: preserve-3d;
+  transition: transform 0.6s;
+  
+}
+
+.front-page-element:hover .front-page-element__inner {
+  transform: rotateY(-180deg);
+}
+
+.front-page-element__inner__front,
+.front-page-element__inner__back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+
+}
+
+.front-page-element__inner__front {
+  height: 100%;
+  background-image: url('https://enl.ee/wp-content/uploads/2019/12/RAHASTUSPROGRAMM-1-1024x683.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  backface-visibility: hidden;
+  transition: 1s;
+
+  &__title {
+    position: absolute;
+    bottom: 2rem;
+    left: 1rem;
+    display: inline-block;
+    color: $color-white;
+    font-weight: 300;
+    font-size: 2.5rem;
+    line-height: 0;
+    text-align: left;
+
+    span {
+      margin-right: -0.7rem;
+      padding: 0.7rem 0;
+      padding-right: 0.5rem;
+      padding-left: 0.5rem;
+      color: $color-white;
+      font-weight: 300;
+      font-size: 2.5rem;
+      line-height: 1.5;
+      background-color: $color-brand;
+    }
+  }
+
+}
+
+.front-page-element__inner__back {
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  overflow: hidden;
+  text-align: left;
+  background-color: $color-white;
+  transform: rotateY(-180deg);
+  transition: 1s;
+
+  &__title {
+    display: inline-block;
+    margin-top: 1.5rem;
+    padding: 0 1.5rem;
+    color: $color-white;
+    font-weight: 300;
+    font-size: 2.1rem;
+    line-height: 1.79;
+
+    span {
+      margin-right: -0.7rem;
+      padding: 0.7rem 0;
+      padding-right: 0.5rem;
+      padding-left: 0.5rem;
+      color: $color-white;
+      font-weight: 300;
+      font-size: 2.5rem;
+      line-height: 1.5;
+      background-color: $color-brand;
+    }
+  }
+
+  &__text {
+    max-height: 29.1rem;
+    padding: 1.5rem;
+    overflow: hidden;
+    color: $color-black;
+    font-weight: 300;
+    font-size: 1.7rem;
+    line-height: 1.6rem;
+  }
+}
+
+.item--wide {
+  width: 63rem;
+  height: 39.4rem;
+  margin-top: 1rem;
+
+  @include medium-larger {
+    width: 100%;
+  }
+
+  span {
+    display: inline-block;
+    text-transform: uppercase;
+  }
+}
+
+
+ 
+
+
+
+

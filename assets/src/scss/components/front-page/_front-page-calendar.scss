@@ -1,0 +1,12 @@
+.front-page-calendar {
+  width: 31rem;
+  height: 32.9rem;
+  margin: 0.3rem;
+  padding: 0 2rem;
+  background-color: $color-white;
+
+  @include medium-larger {
+    width: 100%;
+  }
+  
+}

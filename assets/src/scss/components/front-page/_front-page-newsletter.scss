@@ -1,0 +1,82 @@
+.front-page-newsletter {
+  width: 31rem;
+  height: 39.4rem;
+  margin: 0.3rem;
+  margin-top: 1rem;
+  padding: 0 2rem;
+  background-image: url('assets/src/img/svg/mail-taust2.png');
+
+  @include small {
+    width: 100%;
+  }
+
+  @include medium-larger {
+    width: 50%;
+    width: calc(50% - 0.6rem);
+  }
+
+  &__icon {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1rem;
+    padding: 3rem 0 2rem;
+    
+    img {
+      width: auto;
+      height: 8rem;
+    }
+  }
+
+  &__title {
+    h2 {
+      color: $color-brand;
+      font-weight: 900;
+      font-size: 4rem;
+      text-align: center;
+      text-transform: uppercase;
+    }
+  }
+
+  &__text {
+    margin: 1rem 0;
+    text-align: center;
+
+    p {
+      font-weight: 300;
+      font-size: 1.5rem;
+      line-height: 1.4;
+    }
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+
+    input {
+      width: 100%;
+      padding: 0.6rem;
+      background-color: $color-white;
+      border: 0.1rem solid #ccc;
+      border-radius: 0.4rem;
+
+      @include medium-larger {
+        max-width: 30rem;
+      }
+
+    }
+
+    button {
+      margin-top: 2rem;
+      padding: 1rem 2rem;
+      color: $color-white;
+      font-weight: 400;
+      font-size: 1.5rem;
+      text-transform: uppercase;
+      background-color: $color-brand;
+    }
+  
+  }
+}

@@ -1,0 +1,113 @@
+.front-page-events {
+  display: flex;
+  flex-direction: column;
+  width: 31rem;
+  height: 32.9rem;
+  margin: 0.3rem;
+  padding: 0 2rem;
+  background-color: $color-white;
+
+  @include small {
+    width: 100%;
+  }
+
+
+  @include medium-larger {
+    width: 50%;
+    width: calc(50% - 0.6rem);
+    height: 100%;
+  }
+
+  &__title {
+    h3 {
+      display: inline-block;
+      margin-top: 2rem;
+      padding: 0.4rem 1.5rem;
+      color: $color-white;
+      font-weight: 300;
+      font-size: 2rem;
+      text-align: center;
+      text-transform: uppercase;
+      background-color: $color-brand;
+    }
+  }
+
+  &__calendar {
+    overflow-y: scroll;
+
+    a {
+      &:hover {
+        text-decoration: none;
+      }
+    }
+      
+    &__block {
+      display: inline-flex;
+      align-items: center;
+      width: 100%;
+      height: auto;
+      min-height: 5rem;
+      padding: 0 1rem;
+      color: #000;
+      border-top: 0.1rem rgba(60, 57, 57, 0.23) solid;
+
+      &:hover {
+        background-color: $color-brand;
+
+        .front-page-events__calendar__block__date {
+          p {
+            color: $color-brand;
+            background-color: $color-white;
+          }
+        }
+
+        .front-page-events__calendar__block__title {
+          color: $color-white;
+
+          h4 {
+            text-decoration: none;
+          }
+        }
+      }
+
+
+      &__date {
+        p {
+          display: inline-block;
+          padding: 0.3rem 0.5rem 0.1rem;
+          color: $color-white;
+          font-weight: 300;
+          font-size: 1.5rem;
+          background-color: $color-brand;
+        }
+      }
+
+
+      &__title {
+        padding-left: 3rem;
+
+    
+        h4 {
+          font-weight: 400;
+          font-size: 1.5rem;
+        }
+      }
+    }
+  }
+
+  &__link {
+    margin-top: 2rem;
+
+    a {
+      color: $color-gray;
+      font-weight: 400;
+      font-size: 2rem;
+      transition: color 0.1s ease-in-out;
+
+      &:hover {
+        color: $color-black;
+        text-decoration: none;
+      }
+    }
+  }
+}

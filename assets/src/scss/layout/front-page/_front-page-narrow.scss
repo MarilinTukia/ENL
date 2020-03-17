@@ -1,0 +1,21 @@
+
+.front-page-narrow {
+  display: block;
+  // display: flex;
+  // flex-wrap: wrap;
+  grid-column: 3/4;
+  width: 31rem;
+
+  @include medium-larger {
+    display: flex;
+    flex-wrap: wrap;
+    grid-column: 1/4;
+    width: 100%;
+  }
+
+  @include small {
+    grid-column: 1/4;
+    width: 100%;
+  }
+}
+

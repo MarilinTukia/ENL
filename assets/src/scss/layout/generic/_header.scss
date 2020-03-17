@@ -1,0 +1,28 @@
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 5;
+  display: grid;
+  grid-column: 1/4;
+  height: 10.1rem;
+  margin-right: calc((-100vw + 100%) / 2);
+  margin-left: calc((-100vw + 100%) / 2);
+  padding-right: calc((100vw - 100%) / 2);
+  padding-left: calc((100vw - 100%) / 2);
+  background-color: $color-white;
+
+  &__container {
+    display: flex;
+    grid-column: 1/4;
+    justify-content: space-between;
+    height: 100%;
+
+    &__logo {
+      height: 10.1rem;
+
+      img {
+        height: 100%;
+      }
+    }
+  }
+}
